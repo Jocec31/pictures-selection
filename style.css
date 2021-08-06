@@ -1,0 +1,130 @@
+/* RESET */
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body {
+	height: 100vh;
+	background-color: #f1f1f1;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* STYLES GLOBAUX */
+.container {
+	position: relative;
+	padding: 2em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+h1 {
+	font-size: 1.5rem;
+	text-align: center;
+	margin-bottom: 1em;
+}
+p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 2em;
+	width: 60%;
+	background-color: crimson;
+	/* text-align: center; */
+	font-size: 1.5rem;
+	border-radius: 5px;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+p > button {
+	width: 50%;
+	padding: 0.8em 0em;
+	margin-top: 0.5em;
+	color: #f1f1f1;
+	outline: 0;
+	background-color: transparent;
+	border: 0;
+	box-shadow: 1px 1px 5px #333;
+}
+p > button:hover {
+	cursor: pointer;
+	box-shadow: 1px 1px 2px #333;
+}
+p > button:active {
+	box-shadow: none;
+	top: 5px;
+}
+#picture,
+.card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 240px;
+	height: 180px;
+	background-color: transparent;
+	border-radius: 5px;
+	margin: 0.8em 0.8em;
+	box-shadow: 0 1px 5px #333;
+}
+.img {
+	width: 100%;
+	height: 100%;
+}
+.img:hover {
+	cursor: grab;
+}
+
+/* STYLE DISTRIB-CARDS */
+#distrib-cards {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.card:hover {
+	cursor: grabbing;
+}
+.destroy {
+	/* background-image: url(./garbage.svg); */
+	width: 180px;
+	height: 180px;
+	border-radius: 9999px;
+	/* background-color: lightblue; */
+	margin-left: 0.8em;
+	border-top: 2px solid #333;
+	border-right: 2px solid #333;
+	border-left: 2px solid #333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s;
+}
+.destroy img {
+	width: 100%;
+	height: 100%;
+}
+/* STYLE CARDS-SELECTED */
+.cards-selected-group {
+	margin-top: 2em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.cards-selected-group .cards {
+	margin-left: 0.8em;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 600px) {
+	.destroy {
+		width: 50px;
+		border: none;
+	}
+}
